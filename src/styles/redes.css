@@ -1,0 +1,108 @@
+.redes-section {
+  background-color: #fdfbe7;
+  padding: 16px 16px;
+}
+
+.redes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.redes-title {
+  font-size: 42px;
+  font-family: "Gasoek One";
+  color: #3a1f0b;
+  margin-bottom: 40px;
+}
+
+.redes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Fila superior con 3 imágenes horizontales */
+.fila-superior {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.fila-superior a {
+  flex: 1;
+}
+
+/* Fila inferior con 2 columnas */
+.fila-inferior {
+  display: flex;
+  gap: 16px;
+  align-items: stretch; /* <- clave para alinear en altura */
+}
+
+/* Imagen grande a la izquierda */
+.col-grande a,
+.col-cuadricula a {
+  display: block;
+  height: 100%;
+}
+
+.col-grande img,
+.col-cuadricula img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Cuadrícula de 2 imágenes a la derecha */
+.col-cuadricula {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.redes-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.redes-img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fila-superior,
+  .fila-inferior {
+    flex-direction: column;
+  }
+
+  .col-cuadricula {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .col-cuadricula a {
+    flex: 1 1 48%;
+  }
+
+  .col-grande,
+  .col-cuadricula,
+  .fila-superior a {
+    width: 100%;
+  }
+
+  .redes-img {
+    border-radius: 6px;
+  }
+
+  .redes-title {
+    font-size: 28px;
+  }
+}

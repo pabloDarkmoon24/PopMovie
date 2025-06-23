@@ -1,0 +1,139 @@
+.domicilio-section {
+  background-color: #fdfbe7;
+  padding: 16px 16px;
+}
+
+.domicilio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.domicilio-title {
+  font-size: 50px;
+  font-family: "Gasoek One";
+  color: #3a1f0b;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.domicilio-horario {
+  font-size: 25px;
+  color: #3a1f0b;
+  font-family: "CCTimSaleLower Bold";
+  margin-bottom: 40px;
+}
+
+.domicilio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.domicilio-slider-wrapper {
+  flex: 1.2;
+  min-width: 0;
+  position: relative;
+  width: 100%;
+}
+
+.domicilio-slider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  scroll-snap-align: center;
+}
+
+.slide-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.motorizado-wrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.motorizado-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.slider-controls .dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-controls .dot.active {
+  background-color: #9b1f24;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+
+
+@media (max-width: 768px) {
+  .domicilio-section {
+    padding: 40px 12px;
+  }
+
+  .domicilio-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .motorizado-wrapper {
+    display: none;
+  }
+
+  .domicilio-title {
+    font-size: 28px;
+  }
+
+  .domicilio-horario {
+    font-size: 16px;
+    padding: 0 12px;
+  }
+
+  .slide-item {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  .domicilio-slider {
+    gap: 16px;
+  }
+
+  .slider-controls {
+    margin-top: 16px;
+  }
+
+  .slider-controls .dot {
+    width: 12px;
+    height: 12px;
+  }
+}

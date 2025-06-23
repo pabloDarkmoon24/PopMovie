@@ -1,0 +1,112 @@
+.sedes-section {
+  background-color: #ef3d2f;
+  padding: 16px 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sedes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sedes-title {
+  font-size: 50px;
+  font-family: "Gasoek One";
+  color: #fff;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.sedes-subtitle {
+  font-size: 30px;
+  color: #fff;
+  font-family: "CCTimSaleLower Bold";
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.sedes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sede-card {
+  text-align: center;
+}
+
+.sede-img {
+  width: 80%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+
+.sede-btn {
+  width: 400px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sede-btn:hover {
+  transform: scale(1.05);
+}
+
+.sede-float {
+  position: absolute;
+  width: 200px;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.float-1 {
+  top: 700px;
+  left: 1%;
+}
+
+.float-2 {
+  top: 100px;
+  right: 5%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+
+@media (max-width: 768px) {
+  .sedes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sede-btn {
+    width: 180px;
+  }
+
+  .sedes-title {
+    font-size: 28px;
+  }
+
+  .sedes-subtitle {
+    font-size: 16px;
+  }
+  .sede-float{
+  width: 100px;
+  }
+
+  .float-1 {
+  top: 700px;
+  left: 1%;
+}
+
+.float-2 {
+  top: 300px;
+  right: 5%;
+}
+}

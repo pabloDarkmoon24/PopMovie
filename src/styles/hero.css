@@ -1,0 +1,208 @@
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0 16px 0;
+  background: url('../assets/Fondo-banner-HERO.png') no-repeat center;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-muneco {
+  width: 90%;
+  max-width: 400px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+.participa-img {
+   background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.codigo-box {
+  background: #fff4de;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+.codigo-box .texto-codigo {
+  font-size: 18px;
+  color: #4a2b19;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-family: "CCTimSaleLower Bold";
+}
+
+.codigo-box input {
+  width: 90%;
+  padding: 10px ;
+  border-radius: 8px;
+  border: 2px solid #e39b5f; 
+  font-size: 20px ;
+  margin-bottom: 16px;
+  background-color: #fff9ec; 
+  color: #4a2b19;
+  font-family: inherit;
+  text-align: center;
+  font-family: "CCTimSaleLower Bold";
+}
+
+.codigo-box input::placeholder {
+  color: #d2b58e;
+  font-weight: 500;
+}
+
+.codigo-box button {
+  background-color: #9b1f24;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "CCTimSaleLower Bold";
+}
+
+.codigo-box button:hover {
+  background-color: #b42a2f;
+}
+
+.texto-pie {
+  font-size: 17px;
+  color: #fff;
+  margin-top: 15px;
+  text-align: center;
+  margin-right: 30px;
+  font-family: "CCTimSaleLower Bold";
+}
+
+
+@media (max-width: 1024px) {
+  .hero-muneco {
+    margin-left: 0;
+    max-width: 320px;
+  }
+
+  .codigo-box {
+    margin-left: 40px;
+  }
+
+  .participa-img {
+    max-width: 400px;
+  }
+
+  .codigo-box input {
+    font-size: 18px;
+  }
+
+  .codigo-box button {
+    font-size: 18px;
+  }
+
+  .texto-pie {
+    font-size: 15px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+.hero-section {
+  padding: 70px 0 10px 0;
+}
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 0px;
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px; 
+    box-sizing: border-box;
+  }
+
+  .codigo-box {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 16px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background: #fff4de;
+    border-radius: 16px;
+  }
+
+  .codigo-box input {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .codigo-box button {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: fit-content;
+  }
+
+  .texto-pie {
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .participa-img {
+    max-width: 280px;
+    display: block;
+  }
+
+  .hero-muneco {
+    margin: 0px auto 0 auto;
+    max-width: 240px;
+  }
+}
+

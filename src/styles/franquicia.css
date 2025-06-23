@@ -1,0 +1,144 @@
+.franquicia-section {
+  background-color: #fdfbe7;
+  padding: 16px 16px;
+  text-align: center;
+}
+
+.franquicia-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.franquicia-titulo {
+  font-size: 50px;
+  font-family: "Gasoek One";
+  color: #3a1f0b;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.franquicia-subtitulo {
+  font-size: 30px;
+  color: #3a1f0b;
+  font-family: "CCTimSaleLower Bold";
+  margin-bottom: 40px;
+}
+
+.franquicia-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.franquicia-stand img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.franquicia-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.info-img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.btn-franquicia {
+  width: 400px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-franquicia:hover {
+  transform: scale(1.05);
+}
+
+
+.franquicia-slider-wrapper {
+  margin: 30px auto 0 auto; 
+  position: relative;
+  width: 70%;
+
+}
+
+.franquicia-slider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+.slide-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.slider-controls .dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-controls .dot.active {
+  background-color: #9b1f24;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .franquicia-titulo {
+    font-size: 28px;
+  }
+
+  .franquicia-subtitulo {
+    font-size: 16px;
+  }
+
+  .franquicia-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .franquicia-stand img,
+  .info-img,
+  .btn-franquicia,
+  .slide-item img {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .franquicia-slider-wrapper {
+    width: 100%;
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,80 @@
+.giftcard-section {
+  background-color: #f9b44d;
+  padding: 16px 16px;
+  text-align: center;
+}
+
+.giftcard-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.giftcard-title {
+  font-family: "Chewy";
+  font-size: 50px;
+  color: #3a1f0b;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.giftcard-subtitle {
+  font-family: "CCTimSaleLower Bold";
+  font-size: 29px;
+  color: #3a1f0b;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+.giftcard-main-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.giftcard-button-img {
+  width: 600px;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+}
+
+.giftcard-button-img:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .giftcard-title {
+    font-size: 32px;
+  }
+
+  .giftcard-subtitle {
+    font-size: 20px;
+    padding: 0 12px;
+  }
+
+  .giftcard-button-img {
+    width: 320px;
+  }
+
+  .giftcard-container {
+    padding: 0 12px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .giftcard-title {
+    font-size: 26px;
+  }
+
+  .giftcard-subtitle {
+    font-size: 16px;
+  }
+
+  .giftcard-button-img {
+    width: 230px;
+  }
+}

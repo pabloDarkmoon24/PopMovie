@@ -1,0 +1,234 @@
+.combos-section {
+  padding: 16px 16px;
+  background-color: #fdfbe7;
+  position: relative; 
+  overflow: hidden;
+}
+
+.combos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.combos-titulo {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #4a2b19;
+  font-family: "CCTimSaleLower Bold";
+  
+}
+
+.combos-subtitulo {
+  font-size: 30px;
+  color: #4a2b19;
+  margin-bottom: 40px;
+  font-family: "CCTimSaleLower Bold";
+  line-height: 1;
+
+}
+
+.combos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-items: center;
+}
+
+.combo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.combo-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.combo-btn {
+  margin-top: 12px;
+  width: 350px;
+  height: auto;
+  cursor: pointer;
+}
+
+.combo-img,
+.combo-btn {
+  transition: transform 0.3s ease;
+}
+
+.combo-img:hover,
+.combo-btn:hover {
+  transform: scale(1.05);
+}
+
+.combo-grande-card {
+  grid-column: span 2;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.combo-grande-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 100%;
+  border-radius: 12px;
+}
+
+/* Section Two */
+.toppings-section {
+  padding: 10px 16px;
+  background-color: #fdfbe7;
+  
+}
+
+.toppings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.toppings-titulo {
+  font-size: 50px;
+  font-weight: bold;
+  color: #4a2b19;
+  font-family: "Gasoek One";
+  margin-bottom: 8px;
+
+}
+
+.toppings-subtitulo {
+  font-size: 28px;
+  color: #4a2b19;
+  font-family: "CCTimSaleLower Bold";
+  margin-bottom: 32px;
+}
+
+.toppings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.topping-left {
+  display: flex;
+  justify-content: center;
+}
+
+.topping-toscano {
+  max-width: 100%;
+  height: auto;
+}
+
+.topping-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.topping-item {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.topping-item:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 1140px) {
+  .combos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .combo-btn {
+    width: 300px;
+  }
+
+  .combos-titulo {
+    font-size: 36px;
+  }
+
+  .combos-subtitulo {
+    font-size: 28px;
+  }
+  .combos-section {
+    padding: 40px 12px;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .combos-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .combo-btn {
+    width: 240px;
+  }
+
+  .combos-titulo {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .combos-subtitulo {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .combos-section {
+    padding: 10px 12px;
+  }
+
+  .combo-grande-card {
+    grid-column: span 1;
+  }
+  
+  .toppings-section {
+    padding: 10px 12px;
+  }
+
+  .toppings-titulo {
+    font-size: 32px;
+  }
+
+  .toppings-subtitulo {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .toppings-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .topping-left,
+  .topping-right {
+    justify-content: center;
+  }
+
+  .topping-right {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .topping-item {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .topping-toscano {
+    max-width: 90%;
+  }
+}
