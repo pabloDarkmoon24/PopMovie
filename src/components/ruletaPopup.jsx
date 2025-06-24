@@ -11,10 +11,12 @@ const data = [
   { option: 'PopFusion' },
   { option: 'Palomitas' },
   { option: '$10.000' },
-  { option: '2x1' }
+  { option: '2x1' },
+  { option: 'Crispetazo' },
+  { option: 'bono 1 usd' },
 ];
 
-export const RuletaPopup = ({ codigo, premioReal, onClose }) => {
+export const RuletaPopup = ({ codigo, premioReal, redencionReal, onClose }) => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(null);
   const [mostrarPremio, setMostrarPremio] = useState(false);
@@ -30,41 +32,23 @@ export const RuletaPopup = ({ codigo, premioReal, onClose }) => {
   }, [premioReal]);
 
   const lanzarConfeti = () => {
-  const duration = 5 * 1000; 
-  const animationEnd = Date.now() + duration;
-  const defaults = {
-    startVelocity: 25,
-    spread: 360,
-    ticks: 100,
-    zIndex: 9999
+    const duration = 4 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = {
+      startVelocity: 25,
+      spread: 360,
+      ticks: 100,
+      zIndex: 9999,
+    };
+
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+      if (timeLeft <= 0) return clearInterval(interval);
+
+      confetti({ ...defaults, particleCount: 30, origin: { x: Math.random() * 0.3 + 0.1, y: Math.random() - 0.2 } });
+      confetti({ ...defaults, particleCount: 30, origin: { x: Math.random() * 0.3 + 0.6, y: Math.random() - 0.2 } });
+    }, 250);
   };
-
-  const interval = setInterval(() => {
-    const timeLeft = animationEnd - Date.now();
-
-    if (timeLeft <= 0) {
-      return clearInterval(interval);
-    }
-
-    confetti({
-      ...defaults,
-      particleCount: 40,
-      origin: {
-        x: Math.random() * 0.3 + 0.1, // izquierda
-        y: Math.random() - 0.2
-      }
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 40,
-      origin: {
-        x: Math.random() * 0.3 + 0.6, // derecha
-        y: Math.random() - 0.2
-      }
-    });
-  }, 250);
-};
 
   const handleStopSpinning = () => {
     setMostrarPremio(true);
@@ -89,7 +73,6 @@ export const RuletaPopup = ({ codigo, premioReal, onClose }) => {
             radiusLineColor="#fff"
             radiusLineWidth={2}
             fontSize={15}
-            spinDuration={0.6}
           />
         </div>
 
@@ -97,7 +80,7 @@ export const RuletaPopup = ({ codigo, premioReal, onClose }) => {
           <div className="premio-box">
             <h3>¡Felicidades!<br />Ganaste: {data[prizeNumber].option}</h3>
             <div className="giftcard-fake">
-              <p>Código: <strong>{codigo}</strong></p>
+              <p>Código para reclamar en nuestras sedes: <strong>{redencionReal}</strong></p>
             </div>
           </div>
         )}

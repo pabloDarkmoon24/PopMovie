@@ -6,6 +6,7 @@ import { Giftcard } from "./components/giftcard";
 import { Hero } from "./components/hero";
 import { Navbar } from "./components/navbar";
 import { Redes } from "./components/redes";
+import { ScrollToTop } from "./components/scrollToTop";
 import { Sedes } from "./components/sedes";
 
 
@@ -21,6 +22,7 @@ function App() {
       <Franquicia />
       <Redes />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

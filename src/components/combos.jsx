@@ -1,6 +1,6 @@
 import '../styles/combos.css';
 
-// Aquí deberías importar cada tarjeta y cada botón como imagen
+
 import combo1 from '../assets/combos/Combo-crispetazo.png';
 import btn1 from '../assets/combos/Boton-CTA-combo-crispetazo.png';
 
@@ -30,15 +30,16 @@ import imgDoritos from '../assets/combos/Doritos.png';
 import imgNachos from '../assets/combos/Nachos.png';
 import imgCheddar from '../assets/combos/Queso-chedar.png';
 
-
-import { Flotantes } from './flotantes';
+import imgFlotante1 from '../assets/chocolatina-flotante.png'
+import imgFlotante2 from '../assets/queso-flotante.png'
 
 
 export const Combos = () => {
   return (
     <>
     <section className="combos-section" id="combos">
-        <Flotantes />
+        <img src={imgFlotante2} alt="Decoración" className="sede-float float1" />
+        <img src={imgFlotante1} alt="Decoración" className="sede-float float2" />
       <div className="combos-container">
         <h2 className="combos-titulo">Nuestros combos están de película</h2>
         <p className="combos-subtitulo">

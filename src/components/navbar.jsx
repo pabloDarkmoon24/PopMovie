@@ -21,9 +21,9 @@ export const Navbar = () => {
           </div>
 
           <div className="col-6 nav-links desktop-only">
-            <a href="#productos">Productos</a><a >▏</a>
+            <a href="#combos">Productos</a><a >▏</a>
             <a href="#sedes">Sedes</a><a >▏</a>
-            <a href="#franquicias">Franquicias</a><a >▏</a>
+            <a href="#franquicia">Franquicias</a><a >▏</a>
             <a href="#eventos">Eventos</a>
           </div>
 
@@ -36,12 +36,12 @@ export const Navbar = () => {
 
         {menuOpen && (
          <div className="mobile-only mobile-menu">
-          <a href="#productos" onClick={() => setMenuOpen(false)}>Productos</a>
+          <a href="#combos" onClick={() => setMenuOpen(false)}>Productos</a>
           <a href="#sedes" onClick={() => setMenuOpen(false)}>Sedes</a>
-          <a href="#franquicias" onClick={() => setMenuOpen(false)}>Franquicias</a>
+          <a href="#franquicia" onClick={() => setMenuOpen(false)}>Franquicias</a>
           <a href="#eventos" onClick={() => setMenuOpen(false)}>Eventos</a>
 
-          {/* Botón como imagen centrada */}
+
           <div className="mobile-contact-wrapper">
             <a href="#contacto" onClick={() => setMenuOpen(false)}>
               <img src={contacto} alt="Contacto" className="btn-img" />

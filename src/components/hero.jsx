@@ -1,27 +1,48 @@
 import '../styles/hero.css';
 import muneco from '../assets/Poppy-las-del-cine-pero-en-tu-casa.png';
 import participa from '../assets/Boton-participa-y-gana.png';
-import '../styles/grid.css'
+import '../styles/grid.css';
 import { useState } from 'react';
-import { RuletaPopup } from './ruletaPopup';
+import { RuletaPopup } from './RuletaPopup';
+import { db } from '../firebase';
+import { collection, query, where, getDocs, doc, updateDoc } from 'firebase/firestore';
 
 export const Hero = () => {
   const [popupVisible, setPopupVisible] = useState(false);
-  const [codigo, setCodigo] = useState('');
-  const [premio, setPremio] = useState(null);
+  const [codigoInput, setCodigoInput] = useState('');
+  const [premioReal, setPremioReal] = useState(null);
+  const [redencion, setRedencion] = useState('');
 
-  const handleButtonClick = () => {
-    // Aquí simulamos que según el código el premio es fijo
-    const premiosPorCodigo = {
-      ABC123: 'Netflix',
-      XYZ789: 'Disney+',
-      DEF456: '$10.000',
-    };
+  const handleButtonClick = async () => {
+    try {
+      const q = query(
+        collection(db, 'PopMovie'),
+        where('codigo_ingresado', '==', codigoInput)
+      );
 
-    const premioObtenido = premiosPorCodigo[codigo.trim()] || 'Sigue intentando';
+      const snapshot = await getDocs(q);
+      if (!snapshot.empty) {
+        const codigoDoc = snapshot.docs[0];
+        const data = codigoDoc.data();
 
-    setPremio(premioObtenido);
-    setPopupVisible(true);
+        if (data.usado === false) {
+          setPremioReal(data.premio);
+          setRedencion(data.codigo_redencion);
+          setPopupVisible(true);
+
+          // Cambiar el campo "usado" a true en Firestore
+          const docRef = doc(db, 'PopMovie', codigoDoc.id);
+          await updateDoc(docRef, { usado: true });
+        } else {
+          alert('Este código ya fue usado.');
+        }
+      } else {
+        alert('Código inválido. Intenta nuevamente.');
+      }
+    } catch (error) {
+      console.error('Error al consultar el código:', error);
+      alert('Hubo un problema. Intenta más tarde.');
+    }
   };
 
   return (
@@ -42,8 +63,8 @@ export const Hero = () => {
               <input
                 type="text"
                 placeholder="Digita aquí tu código"
-                value={codigo}
-                onChange={(e) => setCodigo(e.target.value)}
+                value={codigoInput}
+                onChange={(e) => setCodigoInput(e.target.value)}
               />
               <button onClick={handleButtonClick}>¡A ver qué me tocó!</button>
             </div>
@@ -53,8 +74,9 @@ export const Hero = () => {
 
         {popupVisible && (
           <RuletaPopup
-            codigo={codigo}
-            premioReal={premio}
+            codigo={codigoInput}
+            premioReal={premioReal}
+            redencionReal={redencion}
             onClose={() => setPopupVisible(false)}
           />
         )}

@@ -56,31 +56,28 @@ export const Franquicia = () => {
 
           <div className="franquicia-info">
             <img src={textoRojo} alt="Texto Rojo Franquicia" className="info-img" />
-            <img src={textoAmarillo} alt="Texto Amarillo Franquicia" className="info-img" />
+            <div className="franquicia-slider-wrapper">
+                    <div className="franquicia-slider" ref={sliderRef}>
+                      {slides.map((img, i) => (
+                        <div className="slide-item" key={i}>
+                          <img src={img} alt={`Franquicia slide ${i + 1}`} />
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="slider-controls desktop-only">
+                      {slides.map((_, i) => (
+                        <button
+                          key={i}
+                          className={`dot ${currentIndex === i ? 'active' : ''}`}
+                          onClick={() => goToSlide(i)}
+                        />
+                      ))}
+                    </div>
+              </div>
             <a href="#contacto">
               <img src={btnSede} alt="Botón Quiero mi sede" className="btn-franquicia" />
             </a>
-          </div>
-        </div>
-
-        {/* SLIDER FINAL */}
-        <div className="franquicia-slider-wrapper">
-          <div className="franquicia-slider" ref={sliderRef}>
-            {slides.map((img, i) => (
-              <div className="slide-item" key={i}>
-                <img src={img} alt={`Franquicia slide ${i + 1}`} />
-              </div>
-            ))}
-          </div>
-
-          <div className="slider-controls desktop-only">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                className={`dot ${currentIndex === i ? 'active' : ''}`}
-                onClick={() => goToSlide(i)}
-              />
-            ))}
           </div>
         </div>
       </div>

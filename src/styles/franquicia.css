@@ -64,7 +64,8 @@
 .franquicia-slider-wrapper {
   margin: 30px auto 0 auto; 
   position: relative;
-  width: 70%;
+  width: 500px;
+  
 
 }
 
@@ -75,6 +76,12 @@
   scroll-snap-type: x mandatory;
   padding-bottom: 16px;
   transition: transform 0.5s ease-in-out;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.franquicia-slider::-webkit-scrollbar {
+  display: none; 
 }
 
 .slide-item {
@@ -99,7 +106,6 @@
   width: 12px;
   height: 12px;
   border: none;
-  border-radius: 50%;
   background-color: #ccc;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -138,6 +144,7 @@
   }
 
   .franquicia-slider-wrapper {
+    max-width: 90%;
     width: 100%;
     padding: 0 12px;
   }

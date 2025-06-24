@@ -143,6 +143,30 @@
   transform: scale(1.05);
 }
 
+.sede-float {
+  position: absolute;
+  width: 200px;
+  z-index: 1;
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.float1{
+  top: 1240px;
+  left: 1%;
+}
+.float2{
+  top: 660px;
+  right: 1%;
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+
 
 @media (max-width: 1140px) {
   .combos-grid {
