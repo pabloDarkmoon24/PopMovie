@@ -49,49 +49,49 @@ export const Combos = () => {
         <div className="combos-grid">
             <div className="combo-card">
                 <img src={combo1} alt="Combo Crispetazo" className="combo-img" />
-                <a href="https://tudominio.com/combos/crispetazo" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn1} alt="Botón Crispetazo" className="combo-btn" />
                 </a>
             </div>
 
             <div className="combo-card">
                 <img src={combo2} alt="Combo Candy Pop" className="combo-img" />
-                <a href="https://tudominio.com/combos/candypop" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn2} alt="Botón Candy Pop" className="combo-btn" />
                 </a>
             </div>
 
             <div className="combo-card">
                 <img src={combo3} alt="Combo Pop Fusión" className="combo-img" />
-                <a href="https://tudominio.com/combos/popfusion" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn3} alt="Botón Pop Fusión" className="combo-btn" />
                 </a>
             </div>
 
             <div className="combo-card">
                 <img src={combo4} alt="Combo Crispetazo Mini" className="combo-img" />
-                <a href="https://tudominio.com/combos/minicrispetazo" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn4} alt="Botón Mini Crispetazo" className="combo-btn" />
                 </a>
             </div>
 
             <div className="combo-card">
                 <img src={combo5} alt="Combo Mini Candy Pop" className="combo-img" />
-                <a href="https://tudominio.com/combos/minicandypop" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn5} alt="Botón Mini Candy Pop" className="combo-btn" />
                 </a>
             </div>
 
             <div className="combo-card">
                 <img src={combo6} alt="Combo Mini Pop Fusión" className="combo-img" />
-                <a href="https://tudominio.com/combos/minipopfusion" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn6} alt="Botón Mini Pop Fusión" className="combo-btn" />
                 </a>
             </div>
 
             <div className="combo-card">
                 <img src={combo7} alt="Combo Mega Pop" className="combo-img" />
-                <a href="https://tudominio.com/combos/megapop" target="_blank" rel="noopener noreferrer">
+                <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
                 <img src={btn7} alt="Botón Mega Pop" className="combo-btn" />
                 </a>
             </div>
