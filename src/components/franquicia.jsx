@@ -75,7 +75,11 @@ export const Franquicia = () => {
                       ))}
                     </div>
               </div>
-            <a href="#contacto">
+            <a 
+              href="https://drive.google.com/file/d/1hm7bUpj0vifDP6xPOaIkWGuAqpA0RaAq/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <img src={btnSede} alt="Botón Quiero mi sede" className="btn-franquicia" />
             </a>
           </div>

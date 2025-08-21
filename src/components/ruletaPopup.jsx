@@ -2,18 +2,18 @@ import { useState, useEffect } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import confetti from 'canvas-confetti';
 import '../styles/ruleta.css';
+import GiftCardComposer from './GiftCardComposer';
+import cardBase from '../assets/bono.png';
 
 const data = [
-  { option: 'Disney+' },
-  { option: 'Netflix' },
+  { option: '10% descuento' },
+  { option: 'bolsita gratis' },
+  { option: '50% descuento' },
+  { option: 'bolsita gratis' },
+  { option: 'Mini Fusión' },
+  { option: 'Mini Crispetazo' },
+  { option: 'Mini Candy' },
   { option: 'Sigue intentando' },
-  { option: 'Amazon Prime' },
-  { option: 'PopFusion' },
-  { option: 'Palomitas' },
-  { option: '$10.000' },
-  { option: '2x1' },
-  { option: 'Crispetazo' },
-  { option: 'bono 1 usd' },
 ];
 
 export const RuletaPopup = ({ codigo, premioReal, redencionReal, onClose }) => {
@@ -80,7 +80,37 @@ export const RuletaPopup = ({ codigo, premioReal, redencionReal, onClose }) => {
           <div className="premio-box">
             <h3>¡Felicidades!<br />Ganaste: {data[prizeNumber].option}</h3>
             <div className="giftcard-fake">
-              <p>Código para reclamar en nuestras sedes: <strong>{redencionReal}</strong></p>
+              <GiftCardComposer
+                baseImage={cardBase}
+                premio={premioReal}
+                codigo={redencionReal}
+                options={{
+                      // Si quieres forzar tamaño de salida (opcional)
+                      width: 200,
+                      height: 90,
+                      qualityScale: 2,
+                      downloadName: 'giftcard-ejemplo.png',
+                      prize: {
+                        xPct: 32,
+                        yPct: 46,
+                        maxWidthPct: 70,
+                        font: 'bold 7px "CCTimSaleLower Bold", Arial, sans-serif',
+                        color: '#9b1f24',
+                        align: 'center',
+                        lineHeight: 1.12,
+                        shadow: { blur: 6, color: 'rgba(0,0,0,0.25)', offsetX: 0, offsetY: 2 }
+                      },
+                      code: {
+                        xPct: 30,
+                        yPct: 85,
+                        maxWidthPct: 80,
+                        font: 'bold 9px "Gasoek One", Arial, sans-serif',
+                        color: '#3a1f0b',
+                        align: 'center',
+                        shadow: { blur: 0, color: 'transparent', offsetX: 0, offsetY: 0 }
+                      }
+                    }}
+              />
             </div>
           </div>
         )}

@@ -12,7 +12,7 @@ export const Giftcard = () => {
           en una experiencia completa.
         </p>
         <img src={imgGiftcard} alt="Sección Giftcard" className="giftcard-main-img" />
-        <a href="https://tupagina.com/combos-y-giftcard" target="_blank" rel="noopener noreferrer">
+        <a href="https://linktr.ee/Popmovie_" target="_blank" rel="noopener noreferrer">
           <img src={imgBotonGiftcard} alt="Botón pedir Giftcard" className="giftcard-button-img" />
         </a>
       </div>

@@ -23,12 +23,15 @@ export const Navbar = () => {
           <div className="col-6 nav-links desktop-only">
             <a href="#combos">Productos</a><a >▏</a>
             <a href="#sedes">Sedes</a><a >▏</a>
-            <a href="#franquicia">Franquicias</a><a >▏</a>
-            <a href="#eventos">Eventos</a>
+            <a href="#franquicia">Franquicias</a>
           </div>
 
           <div className="col-3 nav-contact desktop-only">
-            <a href="#contacto">
+            <a 
+              href="https://linktr.ee/Popmovie_" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <img src={contacto} alt="Contacto" className="btn-img" />
             </a>
           </div>
@@ -39,7 +42,6 @@ export const Navbar = () => {
           <a href="#combos" onClick={() => setMenuOpen(false)}>Productos</a>
           <a href="#sedes" onClick={() => setMenuOpen(false)}>Sedes</a>
           <a href="#franquicia" onClick={() => setMenuOpen(false)}>Franquicias</a>
-          <a href="#eventos" onClick={() => setMenuOpen(false)}>Eventos</a>
 
 
           <div className="mobile-contact-wrapper">
