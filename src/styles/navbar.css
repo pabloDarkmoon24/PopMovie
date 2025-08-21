@@ -171,4 +171,57 @@
   background-color: #fff4de;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
+  @media (max-width: 480px) {
+  .menu-icon {
+    font-size: 20px;
+    padding: 5px 8px;
+    margin-right: 8px;
+  }
+
+  .mobile-menu {
+    width: 200px; /* más estrecho */
+    padding: 16px 12px;
+  }
+
+  .mobile-menu a {
+    font-size: 16px; /* letras más pequeñas */
+    margin-bottom: 10px;
+  }
+
+  .btn-img {
+    height: 35px;
+  }
+
+  .nav-logo img {
+    height: 40px;
+  }
+}
+
+/* Teléfonos muy pequeños (≤360px) */
+@media (max-width: 360px) {
+  .menu-icon {
+    font-size: 18px;
+    padding: 4px 6px;
+    margin-right: 6px;
+  }
+
+  .mobile-menu {
+    width: 180px; /* menú aún más compacto */
+    padding: 14px 10px;
+    border-radius: 12px;
+  }
+
+  .mobile-menu a {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .btn-img {
+    height: 30px;
+  }
+
+  .nav-logo img {
+    height: 35px;
+  }
+}
 }

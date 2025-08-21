@@ -29,6 +29,15 @@ a:hover {
 }
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;   /* <- corta barras horizontales */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -36,6 +45,7 @@ body {
   padding: 0;
   background: transparent;
   font-family: 'CCTimSaleLower-Bold'
+  
 }
 
 h1 {
